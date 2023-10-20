@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import config from '../../config';
 
 class Dogs extends Component {
     state = {
@@ -9,7 +10,7 @@ class Dogs extends Component {
         // Fetch dog data from The Dog API using the provided API key
         fetch('https://api.thedogapi.com/v1/breeds', {
             headers: {
-                'x-api-key': 'live_0BoCmMchYQQRWHHG7UZAKK4TNvvnRxWzZ20WcSBQTtFF60ZiszQ2zsJdWMDU7VMK',
+                'x-api-key': config.apiKey.thedogApi,
             },
         })
             .then((response) => response.json())

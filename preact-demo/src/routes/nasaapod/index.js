@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import axios from 'axios';
+import config from '../../config';
 
 export default class NasaApod extends Component {
     state = {
@@ -15,7 +16,7 @@ export default class NasaApod extends Component {
     fetchNasaData = () => {
         this.setState({ isLoading: true });
 
-        const apiKey = 'o8xVJivvRYnBmHqNSO04IucDhakRel73oGIa1mnt';
+        const apiKey = config.apiKey.nasa;
         const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=' + apiKey;
 
         axios

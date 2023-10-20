@@ -1,12 +1,13 @@
 import { h, Component } from 'preact';
 import style from './style';
 import axios from 'axios';
+import config from '../../config';
 
 export default class OpenWeatherMap extends Component {
     state = {
         weatherData: null,
         location: null, // Remove the default location
-        apiKey: 'fc40bc2d3874d4375b48d1cf4dffa6a9',
+        apiKey: config.apiKey.openweathermap,
         isLoading: false,
         error: null,
     };

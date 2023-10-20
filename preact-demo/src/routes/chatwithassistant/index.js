@@ -1,7 +1,9 @@
 import { h, Component } from 'preact';
 import openai from 'openai';
+import config from '../../config';
+
 // Initialize the OpenAI library with your API key
-openai.apiKey = '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';
+openai.apiKey = config.apiKey.openai;
 
 class ChatWithAssistant extends Component {
     state = {
